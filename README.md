@@ -6,7 +6,7 @@
 
 The aim of this little Python app is to create a working English language dictionary using a json data file containing the words and meanings.
 
-The app also includes some basic fuzzy matching of words to return the most likely alternative word and meaning if the user misspells the word or enters a typo.
+The app also includes some basic fuzzy matching of words to return the most likely alternative word and meaning if the user mis-spells the word or enters a typo.
 
 ---
 
@@ -17,13 +17,13 @@ The app also includes some basic fuzzy matching of words to return the most like
 - [Python3](https://www.python.org/)
   - Used to create the main application functionality
 
-  --
+---
 
 ## Deployment ##
 
-The website was developed using both Gitpod and Visual Studio Code and using Git pushed to GitHub, which hosts the repository. I made the following steps to deploy the site using Heroku:
+The website was developed Visual Studio Code and using Git pushed to GitHub, which hosts the repository. I made the following steps to deploy the site using Heroku:
 
-### **Cloning Sportswear Online from GitHub** ###
+### **Cloning Python English Thesaurus from GitHub** ###
 
 #### **Prerequisites** ###
 
@@ -59,3 +59,11 @@ git clone https://github.com/simonjvardy/python_english_thesaurus.git
 ```Python
 pip3 install -r requirements.txt
 ```
+
+---
+
+## Deployment ##
+
+### **Acknowledgements** ###
+
+- [Udemy: The Python Mega Course - Build 10 Real World Applications](https://www.udemy.com/course/the-python-mega-course/) Credit: Ardit Sulce
