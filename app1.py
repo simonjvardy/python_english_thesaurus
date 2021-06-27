@@ -7,8 +7,10 @@ data = json.load(open('data.json'))
 
 def translate(word):
     """
-    Function to take the user input word and search the dictionary keys to return the associated value.
-    Uses difflib to perform fuzzy match on similar words if the user spells a word incorrectly.
+    Function to take the user input word and search the dictionary keys to
+    return the associated value.
+    Uses difflib to perform fuzzy match on similar words if the user spells a
+    word incorrectly.
     """
 
     # Converts the input word to lower case to match with the dictionary keys.
@@ -18,20 +20,26 @@ def translate(word):
         return data[word]
     elif word.title() in data:
         """
-        This extra clause covers place names like Delhi or Paris etc. that shouldn't be converted by lower() method
+        This extra clause covers place names like Delhi or Paris etc. that
+        shouldn't be converted by lower() method
         """
         return data[word.title()]
     elif word.upper() in data:
         """
-        This extra clause covers acronyms such as NATO and USA etc. that shouldn't be converted by lower() method.
+        This extra clause covers acronyms such as NATO and USA etc. that
+        shouldn't be converted by lower() method.
         """
         return data[word.upper()]
     elif len(get_close_matches(word, data.keys())) > 0:
         """
-        get_close_matches creates a list object. Index 0 is the closest match of the returned words.
-        Asks for confirmation from user if the similar word is correct and returns the definition if yes.
+        get_close_matches creates a list object. Index 0 is the closest match
+        of the returned words.
+        Asks for confirmation from user if the similar word is correct and
+        returns the definition if yes.
         """
-        response =  input("Did you mean %s instead? Enter Y for Yes or N for No: " % get_close_matches(word, data.keys())[0])
+        response = input(
+            "Did you mean %s instead? Enter Y for Yes or N for No: "
+            % get_close_matches(word, data.keys())[0])
         if response.lower() == 'y':
             return data[get_close_matches(word, data.keys())[0]]
         elif response.lower() == 'n':
@@ -40,6 +48,7 @@ def translate(word):
             return "Sorry, we didn't understand your query."
     else:
         return "The word doesn't exist. Please double check it."
+
 
 # User input request - enter a word to look up
 user_input = input("Enter word: ")
