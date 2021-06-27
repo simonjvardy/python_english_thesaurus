@@ -20,6 +20,10 @@ The app also includes some basic fuzzy matching of words to return the most like
 #### **Dependencies** ####
 
 - [mysql-connector-python](https://github.com/mysql/mysql-connector-python)
+  - Used to connect to a cloud based MySQL database
+- [python-decouple](https://pypi.org/project/python-decouple/)
+  - Used to organise local environment settings / parameters
+
 ---
 
 ## Deployment ##
@@ -68,7 +72,7 @@ pip3 install -r requirements.txt
 - In your IDE terminal window, enter:
 
 ```python
-python3 app1.py
+python3 app_json.py
 ```
 
 ---

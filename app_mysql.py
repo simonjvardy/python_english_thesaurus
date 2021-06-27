@@ -26,7 +26,7 @@ def translate(word):
     dictionary table results.
     """
 
-    # Converts the input word to lower case to match with the dictionary keys.
+    # Converts the input word to lower case to match with the database field.
     word = word.lower()
 
     query = cursor.execute(
