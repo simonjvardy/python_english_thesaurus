@@ -1,17 +1,26 @@
 import mysql.connector
+from decouple import config
 
+# Pull environment variables from .env file
+USERNAME = config('USERNAME')
+PASSWORD = config('PASSWORD')
+HOST = config('HOST')
+DATABASE = config('DATABASE')
+
+# mysql connection credentials
 con = mysql.connector.connect(
-user = "ardit700_student",
-password = "ardit700_student",
-host = "108.167.140.122",
-database = "ardit700_pm1database"
+    user=USERNAME,
+    password=PASSWORD,
+    host=HOST,
+    database=DATABASE
 )
 
 cursor = con.cursor()
 
-word=input("Enter the word: ")
+word = input("Enter the word: ")
 
-query = cursor.execute("SELECT Definition FROM Dictionary WHERE Expression = '%s'" % word)
+query = cursor.execute(
+    "SELECT Definition FROM Dictionary WHERE Expression = '%s'" % word)
 results = cursor.fetchall()
 
 if results:

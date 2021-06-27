@@ -17,6 +17,9 @@ The app also includes some basic fuzzy matching of words to return the most like
 - [Python3](https://www.python.org/)
   - Used to create the main application functionality
 
+#### **Dependencies** ####
+
+- [mysql-connector-python](https://github.com/mysql/mysql-connector-python)
 ---
 
 ## Deployment ##
