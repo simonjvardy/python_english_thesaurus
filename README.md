@@ -21,7 +21,7 @@ The app also includes some basic fuzzy matching of words to return the most like
 
 ## Deployment ##
 
-The website was developed Visual Studio Code and using Git pushed to GitHub, which hosts the repository. I made the following steps to deploy the site using Heroku:
+The website was developed Visual Studio Code and using Git pushed to GitHub, which hosts the repository. I made the following steps to deploy and run the app:
 
 ### **Cloning Python English Thesaurus from GitHub** ###
 
@@ -42,7 +42,7 @@ Ensure the following are installed locally on your computer:
 - Using your favourite IDE open up your preferred terminal.
 - **Navigate** to your desired file location.
 
-Copy the following code and input it into your terminal to clone Sportswear-Online:
+Copy the following code and input it into your terminal to clone python_english_thesaurus:
 
 ```Python
 git clone https://github.com/simonjvardy/python_english_thesaurus.git
@@ -58,6 +58,14 @@ git clone https://github.com/simonjvardy/python_english_thesaurus.git
 
 ```Python
 pip3 install -r requirements.txt
+```
+
+#### **Running the app in the CLI** ####
+
+- In your IDE terminal window, enter:
+
+```python
+python3 app1.py
 ```
 
 ---

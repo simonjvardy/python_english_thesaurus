@@ -17,11 +17,20 @@ def translate(word):
     if word in data:
         return data[word]
     elif word.title() in data:
-        # This extra clause covers place names like Delhi or Paris etc. that shouldn't be converted by lower() method
+        """
+        This extra clause covers place names like Delhi or Paris etc. that shouldn't be converted by lower() method
+        """
         return data[word.title()]
+    elif word.upper() in data:
+        """
+        This extra clause covers acronyms such as NATO and USA etc. that shouldn't be converted by lower() method.
+        """
+        return data[word.upper()]
     elif len(get_close_matches(word, data.keys())) > 0:
-        # get_close_matches creates a list object. Index 0 is the closest match of the returned words.
-        # Asks for confirmation fro user is the similar word is correct and returns the definition if yes.
+        """
+        get_close_matches creates a list object. Index 0 is the closest match of the returned words.
+        Asks for confirmation from user if the similar word is correct and returns the definition if yes.
+        """
         response =  input("Did you mean %s instead? Enter Y for Yes or N for No: " % get_close_matches(word, data.keys())[0])
         if response.lower() == 'y':
             return data[get_close_matches(word, data.keys())[0]]
